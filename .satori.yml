@@ -5,8 +5,8 @@ tests:
             - "Hello World"
 software:
     python:
-        execute: ["nodejs", "-e", "console.log('[[tests]]');"]
+        execute: ["./nodejs", "-e", "console.log('[[tests]]');"]
         install:
             - ./configure
             - make -j4
-            - ls -l
+            - ls -l; ls -l src/
