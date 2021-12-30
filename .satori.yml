@@ -1,0 +1,12 @@
+tests:
+    hello:
+        assertStdoutEqual: "Hello World"
+        input:
+            - "Hello World"
+software:
+    python:
+        execute: ["nodejs", "-e", "console.log('[[tests]]');"]
+        install:
+            - ./configure
+            - make -j4
+            - ls -l
